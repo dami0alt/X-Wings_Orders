@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFTP.Designer.cs">
+      <DependentUpon>FrmFTP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,7 +86,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="XMLFile1.xml" />
+    <Content Include="FTP_XML.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

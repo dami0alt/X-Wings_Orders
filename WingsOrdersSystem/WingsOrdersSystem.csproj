@@ -95,6 +95,10 @@
     <Content Include="FTP_XML.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <ProjectReference Include="..\XWUserControls\XWUserControls.csproj">
+      <Project>{20024c37-d0ad-4669-8d96-62f789cd6d79}</Project>
+      <Name>XWUserControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

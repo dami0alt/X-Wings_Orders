@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFTP.Designer.cs">
+      <DependentUpon>FrmFTP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FtpConfig.cs" />
+    <Compile Include="FtpConfigReader.cs" />
+    <Compile Include="FtpService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmFTP.resx">
+      <DependentUpon>FrmFTP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +92,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FTP_XML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <ProjectReference Include="..\XWUserControls\XWUserControls.csproj">
       <Project>{20024c37-d0ad-4669-8d96-62f789cd6d79}</Project>
       <Name>XWUserControls</Name>

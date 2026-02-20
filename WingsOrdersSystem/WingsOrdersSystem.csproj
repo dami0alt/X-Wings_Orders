@@ -92,6 +92,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrystalReport\CrystalReport.csproj">
+      <Project>{aa9fb912-1040-4ed2-8784-ec118234b12f}</Project>
+      <Name>CrystalReport</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Factories\Factories.csproj">
       <Project>{fa6dda1a-587b-4210-8cd0-3fd6cfb71005}</Project>
       <Name>Factories</Name>

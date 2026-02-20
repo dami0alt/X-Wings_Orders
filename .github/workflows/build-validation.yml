@@ -26,3 +26,9 @@ jobs:
 
     - name: Compilar Solución
       run: msbuild X-Wings_Orders.sln /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Install Crystal Reports Runtime
+      run: |
+        Start-BitsTransfer -Source "https://downloads.sap.com/CRforVS13SP33.exe" -Destination "."
+        .\CRforVS13SP33.exe /quiet /norestart
+      shell: powershell

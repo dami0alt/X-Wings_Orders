@@ -32,6 +32,8 @@ namespace FormsDesigner
             this.dgvBase = new System.Windows.Forms.DataGridView();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblLog = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBase)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,12 +74,38 @@ namespace FormsDesigner
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(562, 28);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(539, 33);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Title";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLog
+            // 
+            this.lblLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLog.Location = new System.Drawing.Point(527, 446);
+            this.lblLog.Name = "lblLog";
+            this.lblLog.Size = new System.Drawing.Size(782, 33);
+            this.lblLog.TabIndex = 4;
+            this.lblLog.Text = "Logs";
+            this.lblLog.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblLog.Visible = false;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(40)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1650, 1010);
+            this.Controls.Add(this.lblLog);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvBase);
@@ -99,5 +127,7 @@ namespace FormsDesigner
         protected System.Windows.Forms.Button btnUpdate;
         protected System.Windows.Forms.Button btnCreate;
         protected System.Windows.Forms.DataGridView dgvBase;
+        protected System.Windows.Forms.Label lblTitle;
+        protected System.Windows.Forms.Label lblLog;
     }
 }

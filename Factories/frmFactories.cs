@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Factories
 {
@@ -15,9 +16,10 @@ namespace Factories
     {
         FactoriesEntity ctx;
         BindingSource bsFactories;
-        public frmFactories()
+        public frmFactories(string tableName)
         {
             InitializeComponent();
+            base._tableName = tableName;
             ctx = new FactoriesEntity();
             bsFactories = new BindingSource();
         }
@@ -107,13 +109,59 @@ namespace Factories
         private void frmFactories_Load(object sender, EventArgs e)
         {
             isNew = false;
-            loadData();
-            bindControls();
-            configurateDataGridView();
+            try
+            {
+                loadData();
+                bindControls();
+                configurateDataGridView();
+            }
+            catch(SqlException sql_ex)
+            {
+                MessageBox.Show(
+                   $"SQL Server exception:\n{sql_ex.Message}",
+                   "Error de conexión",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error
+               );
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Generic exception:\n{ex.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+
+            }
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            updateData();
+            try
+            {
+                updateData();
+                lblLog.Visible = true;
+                lblLog.Text = "Registers updated successfully";
+                logsTimer.Start();
+
+            }
+            catch (SqlException sql_ex)
+            {
+                MessageBox.Show(
+                   $"SQL Server exception:\n{sql_ex.Message}",
+                   "Error de conexión",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error
+               );
+
+            }
+            catch (Exception ex)
+            {
+                lblLog.Visible = true;
+                lblLog.Text = "Error:"+ex.Message;
+                logsTimer.Start();
+            }
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -133,5 +181,13 @@ namespace Factories
 
         }
         #endregion
+
+        private void logsTimer_Tick(object sender, EventArgs e)
+        {
+            logsTimer.Stop();
+            lblLog.Text = "";
+            lblLog.Visible = false;
+            logsTimer.Dispose();
+        }
     }
 }

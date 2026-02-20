@@ -29,10 +29,12 @@ namespace Factories
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCode = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
+            this.logsTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnUpdate
@@ -42,6 +44,10 @@ namespace Factories
             // btnCreate
             // 
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Text = "";
             // 
             // lblCode
             // 
@@ -64,7 +70,7 @@ namespace Factories
             // 
             this.txtDesc.Location = new System.Drawing.Point(207, 256);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(382, 29);
+            this.txtDesc.Size = new System.Drawing.Size(436, 29);
             this.txtDesc.TabIndex = 6;
             this.txtDesc.Tag = "DescFactory";
             // 
@@ -77,6 +83,11 @@ namespace Factories
             this.lblDesc.TabIndex = 5;
             this.lblDesc.Text = "Description";
             // 
+            // logsTimer
+            // 
+            this.logsTimer.Interval = 2000;
+            this.logsTimer.Tick += new System.EventHandler(this.logsTimer_Tick);
+            // 
             // frmFactories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -88,6 +99,8 @@ namespace Factories
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmFactories";
             this.Load += new System.EventHandler(this.frmFactories_Load);
+            this.Controls.SetChildIndex(this.lblTitle, 0);
+            this.Controls.SetChildIndex(this.lblLog, 0);
             this.Controls.SetChildIndex(this.btnUpdate, 0);
             this.Controls.SetChildIndex(this.btnCreate, 0);
             this.Controls.SetChildIndex(this.lblCode, 0);
@@ -105,5 +118,6 @@ namespace Factories
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Timer logsTimer;
     }
 }

@@ -19,7 +19,7 @@ namespace WingsOrdersSystem
         }
         private void xwLauchFrmFactories_ButtonClick(object sender, EventArgs e)
         {
-            frmFactories frm = new frmFactories();
+            frmFactories frm = new frmFactories("Factories");
             frm.Show();
         }
     }

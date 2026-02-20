@@ -12,9 +12,11 @@ namespace FormsDesigner
 {
     public partial class frmBase : Form
     {
+        protected string _tableName;
         public frmBase()
         {
             InitializeComponent();
+            if (DesignMode) return;
             dgvBase.UserDeletingRow += new DataGridViewRowCancelEventHandler(dgv_UserDeletingRow);
         }
         protected virtual void dgv_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -57,6 +59,7 @@ namespace FormsDesigner
 
         private void frmBase_Load(object sender, EventArgs e)
         {
+            lblTitle.Text = _tableName;
             configurateDataGridView();
         }
     }

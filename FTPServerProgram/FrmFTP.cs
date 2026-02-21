@@ -20,7 +20,6 @@ namespace FTPServerProgram
 
 		private void btnCheck_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show(Application.StartupPath);
 			try
 			{
 				var config = FtpConfigReader.Load("FTP_XML.xml");

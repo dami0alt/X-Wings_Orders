@@ -122,7 +122,7 @@ namespace WingsOrdersSystem
 			this.xwLauchFrmFilliations.Name = "xwLauchFrmFilliations";
 			this.xwLauchFrmFilliations.Size = new System.Drawing.Size(300, 277);
 			this.xwLauchFrmFilliations.TabIndex = 9;
-			this.xwLauchFrmFilliations.Title = "Species";
+			this.xwLauchFrmFilliations.Title = "Filliations";
 			this.xwLauchFrmFilliations.ButtonClick += new System.EventHandler(this.xwLauchFrmFilliations_ButtonClick);
 			// 
 			// xwLauchFrmPlanets

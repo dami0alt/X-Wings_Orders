@@ -8,9 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EdiProcessor;
+using EF_CRUD;
 
 
-namespace Formularios_prueba
+namespace FormsEDI
 {
     public partial class Form1 : Form
     {
@@ -21,7 +22,6 @@ namespace Formularios_prueba
         {
             InitializeComponent();
             btnOpenCristal.Enabled = false;
-
         }
 
         private void btnSelectPath_Click(object sender, EventArgs e)
@@ -42,15 +42,18 @@ namespace Formularios_prueba
             {
                 lbStatus.Items.Add("Status: Error, de file is not selected");
                 btnOpenCristal.Enabled = false;
+                txtPath.Clear();
             }
         }
-
+        
         private void btnProcess_Click(object sender, EventArgs e)
         {
             try
             {
+                
                 edi.ReadEDI(path);
                 lbStatus.Items.Add("Status: File readed and database updated");
+                lbStatus.Items.Add($"Current Order ID: {CurrentOrder.LastSavedOrderId}");
             }
             catch (Exception a)
             {
@@ -58,9 +61,12 @@ namespace Formularios_prueba
             }
         }
 
-        private void btnOpenCristal_Click(object sender, EventArgs e)
+        private void lbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (lbStatus.SelectedItem != null)
+            {
+                textBox1.Text = lbStatus.SelectedItem.ToString();
+            }
         }
     }
 }

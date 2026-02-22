@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 using EF_CRUD;
+using System.Data.Entity;
+
+
 
 namespace EdiProcessor
 {
@@ -34,44 +37,64 @@ namespace EdiProcessor
             Order order = new Order();
             OrderInfo orderInfo = new OrderInfo();
             OrdersDetail ordersDetail = new OrdersDetail();
+
+
             if (EDIList[0].Equals("ORDERS_D_96A_UN_EAN008"))
             {
-                foreach (string data in EDIList)
+                using (DbContextTransaction transaction = ctx.Database.BeginTransaction())
                 {
-                    string[] splitedData = data.Split('|');
-
-                    switch (splitedData[0])
+                    try
                     {
-                        case "ORD": //Datos generales 
-                            order = new Order();
-                            order = ProcessORD(order, splitedData);
-                            break;
-                        case "DTM": //Fechas 
-                            order = ProcessDTM(order, splitedData);
-                            break;
-                        case "NADMS": //Emisor del mensaje
-                            orderInfo = new OrderInfo();
-                            order.OrderInfoes.Add(ProcessNADMS(orderInfo, splitedData));
-                            break;
-                        case "NADMR": //Receptor del mensaje
-                            order = ProcessNADMR(order, splitedData);
-                            break;
-                        case "LIN":
-                            ordersDetail = new OrdersDetail();
-                            ordersDetail = ProcessLIN(ordersDetail, splitedData);
-                            break;
-                        case "QTYLIN":
-                            ordersDetail = ProcessQTYLIN(ordersDetail, splitedData);
-                            break;
-                        case "DTMLIN":
-                            ordersDetail = ProcessDTMLIN(ordersDetail, splitedData);
-                            order.OrdersDetails.Add(ordersDetail);
-                            break;
-                        default:
-                            break;
+                        foreach (string data in EDIList)
+                        {
+                            string[] splitedData = data.Split('|');
+
+                            switch (splitedData[0])
+                            {
+                                case "ORD": //Datos generales 
+                                    order = new Order();
+                                    order = ProcessORD(order, splitedData);
+                                    break;
+                                case "DTM": //Fechas 
+                                    order = ProcessDTM(order, splitedData);
+                                    break;
+                                case "NADMS": //Emisor del mensaje
+                                    orderInfo = new OrderInfo();
+                                    order.OrderInfoes.Add(ProcessNADMS(orderInfo, splitedData));
+                                    break;
+                                case "NADMR": //Receptor del mensaje
+                                    order = ProcessNADMR(order, splitedData);
+                                    break;
+                                case "LIN":
+                                    ordersDetail = new OrdersDetail();
+                                    ordersDetail = ProcessLIN(ordersDetail, splitedData);
+                                    break;
+                                case "QTYLIN":
+                                    ordersDetail = ProcessQTYLIN(ordersDetail, splitedData);
+                                    break;
+                                case "DTMLIN":
+                                    ordersDetail = ProcessDTMLIN(ordersDetail, splitedData);
+                                    order.OrdersDetails.Add(ordersDetail);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        ctx.Orders.Add(order);
+                        ctx.SaveChanges();
+
+                        transaction.Commit();
+                        CurrentOrder.LastSavedOrderId = order.idOrder;
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+
+                        Console.WriteLine("Error, Rollback maded: " + ex.Message);
                     }
                 }
-                ctx.SaveChanges();
             }
         }
 
@@ -181,14 +204,17 @@ namespace EdiProcessor
         #region Methods Order
         private OrdersDetail ProcessLIN(OrdersDetail orderDetail, string[] data)
         {
+            string codigoPlaneta = data[1];
+            string codigoReferencia = data[2];
+
             int idPlanets = ctx.Planets
-                                   .Where(t => t.CodePlanet == data[1])
+                                   .Where(t => t.CodePlanet == codigoPlaneta)
                                    .Select(t => t.idPlanet) // Proyectamos solo la columna ID
                                    .FirstOrDefault();
 
 
             short CodeNormalizado = ctx.References
-                                    .Where(t => t.codeReference == data[2])
+                                    .Where(t => t.codeReference == codigoReferencia)
                                    .Select(t => t.idReference) // Proyectamos solo la columna ID
                                    .FirstOrDefault();
 

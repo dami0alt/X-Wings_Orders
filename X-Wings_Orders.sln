@@ -9,7 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiProcessor", "EdiProcesso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFOrders", "EF_CRUD\EFOrders.csproj", "{D498FDA9-BBD0-403E-AF4E-8142A65781BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frmEDI", "Formularios prueba\frmEDI.csproj", "{ED8BC13F-42E7-4840-8F52-7E90B3BABC51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsEDI", "Formularios prueba\FormsEDI.csproj", "{ED8BC13F-42E7-4840-8F52-7E90B3BABC51}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XWUserControls", "XWUserControls\XWUserControls.csproj", "{20024C37-D0AD-4669-8D96-62F789CD6D79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalReport", "CrystalReport\CrystalReport.csproj", "{AA9FB912-1040-4ED2-8784-EC118234B12F}"

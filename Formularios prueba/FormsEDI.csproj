@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{ED8BC13F-42E7-4840-8F52-7E90B3BABC51}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Formularios_prueba</RootNamespace>
-    <AssemblyName>Formularios prueba</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FormsEDI</RootNamespace>
+    <AssemblyName>FormsEDI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,7 +56,6 @@
       <DependentUpon>frmEDI.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmEDI.resx">
       <DependentUpon>frmEDI.cs</DependentUpon>
@@ -66,6 +68,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,6 +87,10 @@
     <ProjectReference Include="..\EdiProcessor\EdiProcessor.csproj">
       <Project>{e58fcd1e-53f6-4e85-b5a1-88755172bac0}</Project>
       <Name>EdiProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF_CRUD\EFOrders.csproj">
+      <Project>{d498fda9-bbd0-403e-af4e-8142a65781ba}</Project>
+      <Name>EFOrders</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using Factories;
 using OperationalAreas;
 using Routes;
+using FormsEDI;
+
+
 
 namespace WingsOrdersSystem
 {
@@ -35,6 +38,22 @@ namespace WingsOrdersSystem
         {
             frmRoutes frm = new frmRoutes("Routes");
             frm.Show();
+        }
+
+        private void xwLauchFrmEDI_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void xwLauchFrmEDI_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void xwLauchFrmEDI_ButtonClick(object sender, EventArgs e)
+        {
+            FormsEDI.Form1 form1 = new FormsEDI.Form1();
+            form1.Show();
         }
     }
 }

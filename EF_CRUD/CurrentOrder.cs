@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace EF_CRUD
 {
-    public class OrdersCRUD
+    public class CurrentOrder
     {
-
+            public static int LastSavedOrderId { get; set; }
     }
 }

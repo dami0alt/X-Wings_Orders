@@ -53,7 +53,7 @@
     <Compile Include="Agency.cs">
       <DependentUpon>OrdersModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrdersCRUD.cs" />
+    <Compile Include="CurrentOrder.cs" />
     <Compile Include="Factory.cs">
       <DependentUpon>OrdersModel.tt</DependentUpon>
     </Compile>

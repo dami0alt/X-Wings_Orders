@@ -158,6 +158,14 @@ namespace Filliations
 		{
 			try
 			{
+				var current = bs.Current as Filiation;
+
+				if (current == null && !isNew)
+				{
+					MessageBox.Show("No record selected.");
+					return;
+				}
+
 				UpdateData();
 
 				lblLog.Visible = true;

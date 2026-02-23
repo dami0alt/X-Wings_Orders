@@ -37,7 +37,7 @@ namespace WingsOrdersSystem
 			}
 			else
 			{
-				frmFactories frm = new frmFactories("OperationalAreas");
+				frmFactories frm = new frmFactories("Factories");
 				frm.Show();
 				frm.WindowState = FormWindowState.Maximized;
 			}
@@ -52,7 +52,7 @@ namespace WingsOrdersSystem
             }
             else
             {
-				frmOperationalAreas frm = new frmOperationalAreas("OperationalAreas");
+				frmOperationalAreas frm = new frmOperationalAreas("Operational Areas");
 				frm.Show();
 				frm.WindowState = FormWindowState.Maximized;
 			}			
@@ -67,7 +67,7 @@ namespace WingsOrdersSystem
 			}
 			else
 			{
-				frmOrders frm = new frmOrders("OperationalAreas");
+				frmOrders frm = new frmOrders("Orders");
 				frm.Show();
 				frm.WindowState = FormWindowState.Maximized;
 			}
@@ -102,7 +102,7 @@ namespace WingsOrdersSystem
 			}
 			else
 			{
-				frmSpaceShipCategory frm = new frmSpaceShipCategory("SpaceShipCategories");
+				frmSpaceShipCategory frm = new frmSpaceShipCategory("Spaceship Categories");
 				frm.Show();
 				frm.WindowState = FormWindowState.Maximized;
 			}
@@ -117,7 +117,7 @@ namespace WingsOrdersSystem
 			}
 			else
 			{
-				frmSpaceShipTypes frm = new frmSpaceShipTypes("SpaceShipTypes");
+				frmSpaceShipTypes frm = new frmSpaceShipTypes("Spaceship Types");
 				frm.Show();
 				frm.WindowState = FormWindowState.Maximized;
 			}

@@ -47,42 +47,43 @@ namespace Factories
             // 
             // lblTitle
             // 
-            this.lblTitle.Size = new System.Drawing.Size(319, 33);
+            this.lblTitle.Location = new System.Drawing.Point(610, 46);
+            this.lblTitle.Size = new System.Drawing.Size(292, 32);
             this.lblTitle.Text = "";
             // 
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(141, 189);
+            this.lblCode.Location = new System.Drawing.Point(129, 181);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(60, 24);
+            this.lblCode.Size = new System.Drawing.Size(62, 23);
             this.lblCode.TabIndex = 3;
             this.lblCode.Text = "Code";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(207, 189);
+            this.txtCode.Location = new System.Drawing.Point(209, 181);
             this.txtCode.MaxLength = 12;
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(232, 29);
+            this.txtCode.Size = new System.Drawing.Size(213, 31);
             this.txtCode.TabIndex = 4;
             this.txtCode.Tag = "codeFactory";
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(207, 256);
+            this.txtDesc.Location = new System.Drawing.Point(209, 245);
             this.txtDesc.MaxLength = 50;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(436, 29);
+            this.txtDesc.Size = new System.Drawing.Size(400, 31);
             this.txtDesc.TabIndex = 6;
             this.txtDesc.Tag = "DescFactory";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(86, 256);
+            this.lblDesc.Location = new System.Drawing.Point(79, 245);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(115, 24);
+            this.lblDesc.Size = new System.Drawing.Size(113, 23);
             this.lblDesc.TabIndex = 5;
             this.lblDesc.Text = "Description";
             // 
@@ -93,8 +94,8 @@ namespace Factories
             // 
             // frmFactories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
-            this.ClientSize = new System.Drawing.Size(1650, 1010);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.ClientSize = new System.Drawing.Size(1513, 968);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.txtCode);

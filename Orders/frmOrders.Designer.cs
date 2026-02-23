@@ -58,83 +58,83 @@ namespace Orders
             // lblCodeOrder
             // 
             this.lblCodeOrder.AutoSize = true;
-            this.lblCodeOrder.Location = new System.Drawing.Point(113, 126);
+            this.lblCodeOrder.Location = new System.Drawing.Point(104, 121);
             this.lblCodeOrder.Name = "lblCodeOrder";
-            this.lblCodeOrder.Size = new System.Drawing.Size(60, 24);
+            this.lblCodeOrder.Size = new System.Drawing.Size(62, 23);
             this.lblCodeOrder.TabIndex = 5;
             this.lblCodeOrder.Text = "Code";
             // 
             // txtCodeOrder
             // 
-            this.txtCodeOrder.Location = new System.Drawing.Point(199, 126);
+            this.txtCodeOrder.Location = new System.Drawing.Point(182, 121);
             this.txtCodeOrder.MaxLength = 12;
             this.txtCodeOrder.Name = "txtCodeOrder";
-            this.txtCodeOrder.Size = new System.Drawing.Size(275, 29);
+            this.txtCodeOrder.Size = new System.Drawing.Size(252, 31);
             this.txtCodeOrder.TabIndex = 6;
             this.txtCodeOrder.Tag = "codeOrder";
             // 
             // lblDateOrder
             // 
             this.lblDateOrder.AutoSize = true;
-            this.lblDateOrder.Location = new System.Drawing.Point(121, 198);
+            this.lblDateOrder.Location = new System.Drawing.Point(111, 190);
             this.lblDateOrder.Name = "lblDateOrder";
-            this.lblDateOrder.Size = new System.Drawing.Size(52, 24);
+            this.lblDateOrder.Size = new System.Drawing.Size(54, 23);
             this.lblDateOrder.TabIndex = 7;
             this.lblDateOrder.Text = "Date";
             // 
             // txtFactory
             // 
             this.txtFactory.Enabled = false;
-            this.txtFactory.Location = new System.Drawing.Point(491, 332);
+            this.txtFactory.Location = new System.Drawing.Point(450, 318);
             this.txtFactory.Name = "txtFactory";
             this.txtFactory.ReadOnly = true;
-            this.txtFactory.Size = new System.Drawing.Size(378, 29);
+            this.txtFactory.Size = new System.Drawing.Size(347, 31);
             this.txtFactory.TabIndex = 12;
             this.txtFactory.Tag = "cmbFactory.idFactory";
             // 
             // lblFactory
             // 
             this.lblFactory.AutoSize = true;
-            this.lblFactory.Location = new System.Drawing.Point(94, 335);
+            this.lblFactory.Location = new System.Drawing.Point(86, 321);
             this.lblFactory.Name = "lblFactory";
-            this.lblFactory.Size = new System.Drawing.Size(79, 24);
+            this.lblFactory.Size = new System.Drawing.Size(79, 23);
             this.lblFactory.TabIndex = 11;
             this.lblFactory.Text = "Factory";
             // 
             // txtPriority
             // 
             this.txtPriority.Enabled = false;
-            this.txtPriority.Location = new System.Drawing.Point(367, 263);
+            this.txtPriority.Location = new System.Drawing.Point(336, 252);
             this.txtPriority.Name = "txtPriority";
             this.txtPriority.ReadOnly = true;
-            this.txtPriority.Size = new System.Drawing.Size(275, 29);
+            this.txtPriority.Size = new System.Drawing.Size(252, 31);
             this.txtPriority.TabIndex = 10;
             this.txtPriority.Tag = "cmbPriority.idPriority";
             // 
             // lblPriority
             // 
             this.lblPriority.AutoSize = true;
-            this.lblPriority.Location = new System.Drawing.Point(99, 266);
+            this.lblPriority.Location = new System.Drawing.Point(91, 255);
             this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(74, 24);
+            this.lblPriority.Size = new System.Drawing.Size(72, 23);
             this.lblPriority.TabIndex = 9;
             this.lblPriority.Text = "Priority";
             // 
             // cmbPriority
             // 
             this.cmbPriority.FormattingEnabled = true;
-            this.cmbPriority.Location = new System.Drawing.Point(199, 261);
+            this.cmbPriority.Location = new System.Drawing.Point(182, 250);
             this.cmbPriority.Name = "cmbPriority";
-            this.cmbPriority.Size = new System.Drawing.Size(151, 32);
+            this.cmbPriority.Size = new System.Drawing.Size(139, 31);
             this.cmbPriority.TabIndex = 13;
             this.cmbPriority.Tag = "Priority.IdPriority";
             // 
             // cmbFactory
             // 
             this.cmbFactory.FormattingEnabled = true;
-            this.cmbFactory.Location = new System.Drawing.Point(199, 330);
+            this.cmbFactory.Location = new System.Drawing.Point(182, 316);
             this.cmbFactory.Name = "cmbFactory";
-            this.cmbFactory.Size = new System.Drawing.Size(275, 32);
+            this.cmbFactory.Size = new System.Drawing.Size(252, 31);
             this.cmbFactory.TabIndex = 14;
             this.cmbFactory.Tag = "Factories.IdFactory";
             // 
@@ -149,17 +149,17 @@ namespace Orders
             this.dtpDateOrder.CustomFormat = "dd/MM/yyyy H:mm:ss";
             this.dtpDateOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateOrder.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateOrder.Location = new System.Drawing.Point(198, 194);
+            this.dtpDateOrder.Location = new System.Drawing.Point(182, 186);
             this.dtpDateOrder.Name = "dtpDateOrder";
-            this.dtpDateOrder.Size = new System.Drawing.Size(231, 29);
+            this.dtpDateOrder.Size = new System.Drawing.Size(230, 29);
             this.dtpDateOrder.TabIndex = 16;
             this.dtpDateOrder.Tag = "dateOrder";
             this.dtpDateOrder.Value = new System.DateTime(2026, 2, 23, 0, 0, 0, 0);
             // 
             // frmOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
-            this.ClientSize = new System.Drawing.Size(1650, 1010);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.ClientSize = new System.Drawing.Size(1513, 968);
             this.Controls.Add(this.dtpDateOrder);
             this.Controls.Add(this.cmbFactory);
             this.Controls.Add(this.cmbPriority);

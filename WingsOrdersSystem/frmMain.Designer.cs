@@ -39,8 +39,7 @@ namespace WingsOrdersSystem
 			this.xwLauchFrmOpeArea = new XWUserControls.XWLauchForm();
 			this.xwLauchFrmCristalR = new XWUserControls.XWLauchForm();
 			this.xwLauchFrmEDI = new XWUserControls.XWLauchForm();
-			this.xwLauchFrmRutas = new XWUserControls.XWLauchForm();
-			this.xwLauchFrmOption = new XWUserControls.XWLauchForm();
+			this.xwLauchFrmRouts = new XWUserControls.XWLauchForm();
 			this.xwLauchFrmFTP = new XWUserControls.XWLauchForm();
 			this.xwLauchFrmFactories = new XWUserControls.XWLauchForm();
 			this.pnlMain.SuspendLayout();
@@ -69,8 +68,7 @@ namespace WingsOrdersSystem
 			this.pnlControls.Controls.Add(this.xwLauchFrmOpeArea);
 			this.pnlControls.Controls.Add(this.xwLauchFrmCristalR);
 			this.pnlControls.Controls.Add(this.xwLauchFrmEDI);
-			this.pnlControls.Controls.Add(this.xwLauchFrmRutas);
-			this.pnlControls.Controls.Add(this.xwLauchFrmOption);
+			this.pnlControls.Controls.Add(this.xwLauchFrmRouts);
 			this.pnlControls.Controls.Add(this.xwLauchFrmFTP);
 			this.pnlControls.Controls.Add(this.xwLauchFrmFactories);
 			this.pnlControls.Location = new System.Drawing.Point(58, 158);
@@ -203,33 +201,18 @@ namespace WingsOrdersSystem
 			// 
 			// xwLauchFrmRutas
 			// 
-			this.xwLauchFrmRutas.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.xwLauchFrmRutas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.xwLauchFrmRutas.HoverBackColor = "23;23;23";
-			this.xwLauchFrmRutas.HoverFontColor = "233;233;233";
-			this.xwLauchFrmRutas.HoverImagePath = "resources\\png\\darth_vader_hover.png";
-			this.xwLauchFrmRutas.InitialImagePath = "resources\\png\\darth_vader.png";
-			this.xwLauchFrmRutas.Location = new System.Drawing.Point(336, 304);
-			this.xwLauchFrmRutas.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-			this.xwLauchFrmRutas.Name = "xwLauchFrmRutas";
-			this.xwLauchFrmRutas.Size = new System.Drawing.Size(300, 277);
-			this.xwLauchFrmRutas.TabIndex = 3;
-			this.xwLauchFrmRutas.Title = "Rutas";
-			// 
-			// xwLauchFrmOption
-			// 
-			this.xwLauchFrmOption.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.xwLauchFrmOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.xwLauchFrmOption.HoverBackColor = "23;23;23";
-			this.xwLauchFrmOption.HoverFontColor = "233;233;233";
-			this.xwLauchFrmOption.HoverImagePath = "resources\\png\\darth_vader_hover.png";
-			this.xwLauchFrmOption.InitialImagePath = "resources\\png\\darth_vader.png";
-			this.xwLauchFrmOption.Location = new System.Drawing.Point(4, 304);
-			this.xwLauchFrmOption.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-			this.xwLauchFrmOption.Name = "xwLauchFrmOption";
-			this.xwLauchFrmOption.Size = new System.Drawing.Size(300, 277);
-			this.xwLauchFrmOption.TabIndex = 2;
-			this.xwLauchFrmOption.Title = "Option";
+			this.xwLauchFrmRouts.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.xwLauchFrmRouts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.xwLauchFrmRouts.HoverBackColor = "23;23;23";
+			this.xwLauchFrmRouts.HoverFontColor = "233;233;233";
+			this.xwLauchFrmRouts.HoverImagePath = "resources\\png\\darth_vader_hover.png";
+			this.xwLauchFrmRouts.InitialImagePath = "resources\\png\\darth_vader.png";
+			this.xwLauchFrmRouts.Location = new System.Drawing.Point(336, 304);
+			this.xwLauchFrmRouts.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+			this.xwLauchFrmRouts.Name = "xwLauchFrmRutas";
+			this.xwLauchFrmRouts.Size = new System.Drawing.Size(300, 277);
+			this.xwLauchFrmRouts.TabIndex = 3;
+			this.xwLauchFrmRouts.Title = "Rutas";
 			// 
 			// xwLauchFrmFTP
 			// 

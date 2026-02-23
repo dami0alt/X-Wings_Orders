@@ -58,19 +58,12 @@
     <Compile Include="Filiation.cs">
       <DependentUpon>SpaceShipModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="frmSpaceShipType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSpaceShipType.Designer.cs">
-      <DependentUpon>frmSpaceShipType.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSpaceShipTypes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSpaceShipTypes.Designer.cs">
       <DependentUpon>frmSpaceShipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceShipCategory.cs">
       <DependentUpon>SpaceShipModel.tt</DependentUpon>
@@ -93,9 +86,6 @@
     <Compile Include="SpaceShipType.cs">
       <DependentUpon>SpaceShipModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmSpaceShipType.resx">
-      <DependentUpon>frmSpaceShipType.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSpaceShipTypes.resx">
       <DependentUpon>frmSpaceShipTypes.cs</DependentUpon>
     </EmbeddedResource>

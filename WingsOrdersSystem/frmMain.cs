@@ -11,6 +11,7 @@ using Factories;
 using OperationalAreas;
 using Orders;
 using Routes;
+using FTPServerProgram;
 
 namespace WingsOrdersSystem
 {
@@ -59,5 +60,11 @@ namespace WingsOrdersSystem
 				frm.Show();
 			}			
 		}
+
+        private void xwLauchFrmFTP_ButtonClick(object sender, EventArgs e)
+        {
+			FrmFTP frm = new FrmFTP();
+			frm.Show();
+        }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7071662B-A2D2-4655-A3B8-8E866CE3B0F2}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Filliations</RootNamespace>
-    <AssemblyName>Filliations</AssemblyName>
+    <ProjectGuid>{1690AE8D-3684-4391-9B3A-9AD195C29D8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Filiations</RootNamespace>
+    <AssemblyName>Filiations</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -58,33 +55,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Filiation.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Filiations.cs">
+      <DependentUpon>FiliationsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="frmFilliations.cs">
+    <Compile Include="FiliationsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FiliationsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FiliationsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FiliationsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FiliationsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FiliationsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFiliations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFilliations.Designer.cs">
-      <DependentUpon>frmFilliations.cs</DependentUpon>
+    <Compile Include="frmFiliations.Designer.cs">
+      <DependentUpon>frmFiliations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FilliationsModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FilliationsModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmFilliations.resx">
-      <DependentUpon>frmFilliations.cs</DependentUpon>
+    <EmbeddedResource Include="frmFiliations.resx">
+      <DependentUpon>frmFiliations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,12 +93,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="FilliationsModel.edmx">
+    <EntityDeploy Include="FiliationsModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FilliationsModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>FiliationsModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="FilliationsModel.edmx.diagram">
-      <DependentUpon>FilliationsModel.edmx</DependentUpon>
+    <None Include="FiliationsModel.edmx.diagram">
+      <DependentUpon>FiliationsModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -117,25 +115,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>FilliationsModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FilliationsModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FormsDesigner\FormsDesigner.csproj">
       <Project>{a720e2b0-7044-49e1-bc2e-11e8394bc8dc}</Project>
       <Name>FormsDesigner</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FiliationsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FiliationsModel.Context.cs</LastGenOutput>
+      <DependentUpon>FiliationsModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="FiliationsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FiliationsModel.edmx</DependentUpon>
+      <LastGenOutput>FiliationsModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace Factories
     public partial class FactoriesEntity : DbContext
     {
         public FactoriesEntity()
-            : base("name=FactoriesEntity")
+            : base("name=FactoriesEntities")
         {
         }
     

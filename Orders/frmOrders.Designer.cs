@@ -162,7 +162,6 @@ namespace Orders
             this.Controls.Add(this.lblCodeOrder);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmOrders";
-            this.Text = "7";
             this.Load += new System.EventHandler(this.frmOrders_Load);
             this.Controls.SetChildIndex(this.btnUpdate, 0);
             this.Controls.SetChildIndex(this.btnCreate, 0);

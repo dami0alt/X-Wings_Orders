@@ -16,7 +16,7 @@ namespace Orders
     public partial class OrdersEntity : DbContext
     {
         public OrdersEntity()
-            : base("name=OrdersConfig")
+            : base("name=OrdersEntities")
         {
         }
     

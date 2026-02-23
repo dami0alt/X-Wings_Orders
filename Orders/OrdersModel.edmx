@@ -127,7 +127,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="OrdersConfig" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="OrdersEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Factories" EntityType="Self.Factory" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Priorities" EntityType="Self.Priority" />
@@ -145,7 +145,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="OrdersModelStoreContainer" CdmEntityContainer="OrdersConfig">
+        <EntityContainerMapping StorageEntityContainer="OrdersModelStoreContainer" CdmEntityContainer="OrdersEntities">
           <EntitySetMapping Name="Factories">
             <EntityTypeMapping TypeName="OrdersModel.Factory">
               <MappingFragment StoreEntitySet="Factories">

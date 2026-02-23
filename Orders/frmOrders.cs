@@ -218,18 +218,21 @@ namespace Orders
             ComboBox cmb = ((ComboBox)sender);
             string name = cmb.Name;
             int selectedValue = 0;
-            if (int.TryParse(cmb.SelectedValue.ToString(), out selectedValue) && selectedValue !=0)
+            if(cmb.SelectedValue != null)
             {
-                string tag = cmb.Tag.ToString();
-                string fkTableName = tag.Split('.')[0];
-
-                foreach (Control ctrl in this.Controls)
+                if (int.TryParse(cmb.SelectedValue.ToString(), out selectedValue) && selectedValue != 0)
                 {
-                    if (ctrl is TextBox && ((TextBox)ctrl).Tag.ToString().Contains(name))
+                    string tag = cmb.Tag.ToString();
+                    string fkTableName = tag.Split('.')[0];
+
+                    foreach (Control ctrl in this.Controls)
                     {
-                        TextBox txt = ((TextBox)ctrl);
-                        string value = findValue(selectedValue, fkTableName);
-                        txt.Text = value;
+                        if (ctrl is TextBox && ((TextBox)ctrl).Tag.ToString().Contains(name))
+                        {
+                            TextBox txt = ((TextBox)ctrl);
+                            string value = findValue(selectedValue, fkTableName);
+                            txt.Text = value;
+                        }
                     }
                 }
             }

@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Filiations
+namespace Filliations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FiliationsEntities : DbContext
+    public partial class SecureCoreG2Entities : DbContext
     {
-        public FiliationsEntities()
-            : base("name=FiliationsEntities")
+        public SecureCoreG2Entities()
+            : base("name=SecureCoreG2Entities")
         {
         }
     

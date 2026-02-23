@@ -8,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Factories;
+using Filliations;
 using OperationalAreas;
 using Orders;
 using Routes;
-using Filiations;
 
 namespace WingsOrdersSystem
 {
@@ -61,9 +61,9 @@ namespace WingsOrdersSystem
 			}			
 		}
 
-		private void xwLauchFrmFiliations_ButtonClick(object sender, EventArgs e)
+		private void xwLauchFrmFilliations_ButtonClick(object sender, EventArgs e)
 		{
-			FrmFiliations frm = new FrmFiliations("Filliations");
+			frmFilliations frm = new frmFilliations("Filliations");
 			frm.Show();
 		}
 	}

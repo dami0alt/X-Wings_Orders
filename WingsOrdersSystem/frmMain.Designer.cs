@@ -283,8 +283,8 @@ namespace WingsOrdersSystem
 
         private XWUserControls.XWLauchForm xwLauchFrmFactories;
         private XWUserControls.XWLauchForm xwLauchFrmFTP;
-        private XWUserControls.XWLauchForm xwLauchFrmOption;
-        private XWUserControls.XWLauchForm xwLauchFrmRutas;
+        private XWUserControls.XWLauchForm xwLauchFrmOrders;
+        private XWUserControls.XWLauchForm xwLauchFrmRouts;
         private XWUserControls.XWLauchForm xwLauchFrmEDI;
         private XWUserControls.XWLauchForm xwLauchFrmCristalR;
         private XWUserControls.XWLauchForm xwLauchFrmOpeArea;

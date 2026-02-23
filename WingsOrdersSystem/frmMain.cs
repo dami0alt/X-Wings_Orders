@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Factories;
 using OperationalAreas;
+using Orders;
 using Routes;
 using Filiations;
 
@@ -26,16 +27,38 @@ namespace WingsOrdersSystem
 			frm.Show();
 		}
 
-		private void xwLauchFrmOpeArea_ButtonClick(object sender, EventArgs e)
-		{            
-			frmOperationalAreas frm = new frmOperationalAreas("OperationalAreas");
-			frm.Show();
-		}
+        private void xwLauchFrmOpeArea_ButtonClick(object sender, EventArgs e)
+        {
+			frmOperationalAreas exist = Application.OpenForms.OfType<frmOperationalAreas>().FirstOrDefault();
+			if(exist != null)
+            {
+				exist.BringToFront();
+            }
+            else
+            {
+				frmOperationalAreas frm = new frmOperationalAreas("OperationalAreas");
+				frm.Show();
+			}			
+        }
 
-		private void xwLauchFrmRutas_ButtonClick(object sender, EventArgs e)
+        private void xwLauchFrmOrders_ButtonClick(object sender, EventArgs e)
+        {
+            frmOrders frm = new frmOrders("Orders");
+            frm.Show();
+        }
+		
+		private void xwLauchFrmRouts_ButtonClick(object sender, EventArgs e)
 		{
-			frmRoutes frm = new frmRoutes("Routes");
-			frm.Show();
+			frmRoutes exist = Application.OpenForms.OfType<frmRoutes>().FirstOrDefault();
+            if (exist != null)
+            {
+				exist.BringToFront();
+            }
+            else
+            {
+				frmRoutes frm = new frmRoutes("Routes");
+				frm.Show();
+			}			
 		}
 
 		private void xwLauchFrmFiliations_ButtonClick(object sender, EventArgs e)

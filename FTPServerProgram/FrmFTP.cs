@@ -20,43 +20,33 @@ namespace FTPServerProgram
 
 		private void btnCheck_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				txtLog.AppendText("> Starting connection with the FTP server...\r\n");
+            try
+            {
+                var config = FtpConfigReader.Load("FTP_XML.xml");
+                var ftpService = new FtpService(config);
 
-				var config = FtpConfigReader.Load("FTP_XML.xml");
-				var ftpService = new FtpService(config);
+                string[] remoteFiles = ftpService.ListFiles();
 
-				string[] remoteFiles = ftpService.ListFiles();
+                foreach (var file in remoteFiles)
+                {
+                    if (!file.EndsWith(".edi", StringComparison.OrdinalIgnoreCase))
+                        continue;
 
-				foreach (var file in remoteFiles)
-				{
-					// Solo procesamos EDI
-					if (!file.EndsWith(".edi", StringComparison.OrdinalIgnoreCase))
-						continue;
+                    string localPath = Path.Combine(config.LocalFolder, file);
 
-					string localPath = Path.Combine(config.LocalFolder, file);
+                    if (!File.Exists(localPath))
+                    {
+                        ftpService.DownloadFile(file);
+                        txtLog.AppendText($"Descargado: {file}\r\n");
+                    }
+                }
 
-					// Si no existe localmente → es nuevo
-					if (!File.Exists(localPath))
-					{
-						txtLog.AppendText($"> Downloading new file: {file}...\r\n");
-						ftpService.DownloadFile(file);
-
-						txtLog.AppendText($">Moving {file} to Tractats folder...\r\n");
-						ftpService.MoveToProcessed(file);
-
-						txtLog.AppendText($"Processed: {file}\r\n");
-						txtLog.AppendText("--------------------------------------------------\r\n");
-					}
-				}
-
-				txtLog.AppendText("Process completed.\r\n");
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Error: " + ex.Message);
-			}
-		}
+                txtLog.AppendText("Proceso finalizado.\r\n");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
 	}
 }

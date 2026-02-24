@@ -31,7 +31,7 @@ namespace FormSpaceShipTypes
         #region Methods
         private void loadData()
         {
-            spaceShipSource.DataSource = context.SpaceShipTypes.Include(n => n.Filiation).Include(n => n.SpaceShipCategory).ToList();
+            spaceShipSource.DataSource = context.SpaceShipTypes.ToList();
             dgvBase.DataSource = spaceShipSource;
         }
 
@@ -43,13 +43,46 @@ namespace FormSpaceShipTypes
                 {
                     columna.Visible = false;
                 }
+
+                if (columna.Name.ToLower().Equals("filiation")) dgvBase.Columns["Filiation"].Visible = false;
+                if (columna.Name.ToLower().Equals("spaceshipcategory")) dgvBase.Columns["SpaceShipCategory"].Visible = false;
+
             }
 
-            if (dgvBase.Columns.Contains("Filiation"))
-                dgvBase.Columns["Filiation"].Visible = false;
 
-            if (dgvBase.Columns.Contains("SpaceShipCategory"))
-                dgvBase.Columns["SpaceShipCategory"].Visible = false;
+
+
+            if (!dgvBase.Columns.Contains("colFiliation"))
+            {
+                var colFili = new DataGridViewComboBoxColumn
+                {
+                    Name = "colFiliation",
+                    HeaderText = "Filiation",
+                    DataSource = context.Filiations.ToList(),
+                    DisplayMember = "DescFiliations",
+                    ValueMember = "idFiliation",
+                    DataPropertyName = "idFiliation",
+                    FlatStyle = FlatStyle.Flat,
+                    DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing
+                };
+                dgvBase.Columns.Add(colFili);
+            }
+
+            if (!dgvBase.Columns.Contains("colSpaceShipCategory"))
+            {
+                var colFili = new DataGridViewComboBoxColumn
+                {
+                    Name = "colSpaceShipCategory",
+                    HeaderText = "Category",
+                    DataSource = context.SpaceShipCategories.ToList(),
+                    DisplayMember = "DescSpaceShipCategory",
+                    ValueMember = "idSpaceShipCategory",
+                    DataPropertyName = "idSpaceShipCategory",
+                    FlatStyle = FlatStyle.Flat,
+                    DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing
+                };
+                dgvBase.Columns.Add(colFili);
+            }
         }
 
         private void bindControls()

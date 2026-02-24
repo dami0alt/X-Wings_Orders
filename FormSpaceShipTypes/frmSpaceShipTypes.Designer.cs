@@ -52,7 +52,7 @@ namespace FormSpaceShipTypes
             // cbSpaceShipCategory
             // 
             this.cbSpaceShipCategory.FormattingEnabled = true;
-            this.cbSpaceShipCategory.Location = new System.Drawing.Point(206, 313);
+            this.cbSpaceShipCategory.Location = new System.Drawing.Point(206, 312);
             this.cbSpaceShipCategory.Name = "cbSpaceShipCategory";
             this.cbSpaceShipCategory.Size = new System.Drawing.Size(409, 31);
             this.cbSpaceShipCategory.TabIndex = 9;
@@ -61,7 +61,7 @@ namespace FormSpaceShipTypes
             // cbFilliations
             // 
             this.cbFilliations.FormattingEnabled = true;
-            this.cbFilliations.Location = new System.Drawing.Point(206, 264);
+            this.cbFilliations.Location = new System.Drawing.Point(206, 265);
             this.cbFilliations.Name = "cbFilliations";
             this.cbFilliations.Size = new System.Drawing.Size(409, 31);
             this.cbFilliations.TabIndex = 8;

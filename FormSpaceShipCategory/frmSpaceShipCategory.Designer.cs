@@ -51,35 +51,35 @@ namespace FormSpaceShipCategory
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(261, 226);
+            this.txtDesc.Location = new System.Drawing.Point(249, 211);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(436, 29);
+            this.txtDesc.Size = new System.Drawing.Size(400, 31);
             this.txtDesc.TabIndex = 14;
             this.txtDesc.Tag = "DescSpaceShipCategory";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(140, 226);
+            this.lblDesc.Location = new System.Drawing.Point(128, 217);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(115, 24);
+            this.lblDesc.Size = new System.Drawing.Size(113, 23);
             this.lblDesc.TabIndex = 13;
             this.lblDesc.Text = "Description";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(261, 159);
+            this.txtCode.Location = new System.Drawing.Point(249, 146);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(232, 29);
+            this.txtCode.Size = new System.Drawing.Size(213, 31);
             this.txtCode.TabIndex = 12;
             this.txtCode.Tag = "CodeSpaceShipCategory";
             // 
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(195, 159);
+            this.lblCode.Location = new System.Drawing.Point(179, 152);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(60, 24);
+            this.lblCode.Size = new System.Drawing.Size(62, 23);
             this.lblCode.TabIndex = 11;
             this.lblCode.Text = "Code";
             // 
@@ -90,8 +90,8 @@ namespace FormSpaceShipCategory
             // 
             // frmSpaceShipCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
-            this.ClientSize = new System.Drawing.Size(1650, 1010);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.ClientSize = new System.Drawing.Size(1513, 968);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.txtCode);

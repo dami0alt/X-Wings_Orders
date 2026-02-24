@@ -36,6 +36,11 @@ namespace EdiProcessor
 
         private void SaveEDI(string[] EDIList)
         {
+            if (EDIList == null || EDIList.Length == 0)
+            {
+                return;
+            }
+
             Order order = new Order();
             OrderInfo orderInfo = new OrderInfo();
             OrdersDetail ordersDetail = new OrdersDetail();

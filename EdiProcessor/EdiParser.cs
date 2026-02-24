@@ -28,7 +28,14 @@ namespace EdiProcessor
 
             SaveEDI(EDILines);
             string fileName = Path.GetFileName(filepath);
-            string destPath = Path.Combine(@"FTP\Tractats", fileName);
+            string folder = @"FTP\Tractats";
+
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+
+            string destPath = Path.Combine(folder, fileName);
             File.Move(filepath, destPath);
 
             return OrdersIDs;

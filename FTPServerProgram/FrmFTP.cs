@@ -41,7 +41,6 @@ namespace FTPServerProgram
 						txtLog.AppendText($"> Downloading new file: {file}...\r\n");
 
 						ftpService.DownloadFile(file);
-						txtLog.AppendText($">Moving {file} to Tractats folder...\r\n");
 
 						txtLog.AppendText($"Processed: {file}\r\n");
 						txtLog.AppendText("--------------------------------------------------\r\n");
